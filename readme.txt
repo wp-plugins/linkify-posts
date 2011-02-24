@@ -1,11 +1,11 @@
 === Linkify Posts ===
 Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
-Tags: post, id, link, template, coffee2code
+Tags: posts, post, link, linkify, archives, list, widget, template tag, coffee2code
 Requires at least: 2.8
-Tested up to: 3.0.1
-Stable tag: 2.0
-Version: 2.0
+Tested up to: 3.1
+Stable tag: 2.1
+Version: 2.1
 
 Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
 
@@ -14,7 +14,11 @@ Turn a string, list, or array of post IDs and/or slugs into a list of links to t
 
 Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
 
+The plugin provides a widget called "Linkify Catagories" as well as a template tag, `c2c_linkify_categories()`, to easily indicate categories to list and how to list them.  Categories are specified by either ID or slug.  See other parts of the documentation for example usage and capabilities.
+
 Particularly handy when used in conjunction with the post custom field feature of WordPress.  You could define a custom field for "Related Posts" or "Additional Products" and manually list out post IDs, then utilize the function provided by this plugin to display links to those posts in a custom manner.
+
+Links: [Plugin Homepage]:(http://coffee2code.com/wp-plugins/linkify-posts/) | [Author Homepage]:(http://coffee2code.com)
 
 
 == Installation ==
@@ -24,9 +28,29 @@ Particularly handy when used in conjunction with the post custom field feature o
 1. Insert function call(s) to your templates to display links to posts when post IDs are known
 
 
+== Screenshots ==
+
+1. The plugin's widget configuration.
+
+
+== Frequently Asked Questions ==
+
+= What happens if I tell it to list something that I have mistyped, haven't created yet, or have deleted? =
+
+If a given ID/slug doesn't match up with an existing post then that item is ignored without error.
+
+= How do I get items to appear as a list (using HTML tags)? =
+
+Whether you use the template tag or the widget, specify the following information for the appropriate fields/arguments:
+
+Before text: `<ul><li>` (or `<ol><li>`)
+After text: `</li></ul>` (or `</li></ol>`)
+Between posts: `</li><li>`
+
+
 == Template Tags ==
 
-The plugin provides one template tag for use in your theme templates.
+The plugin provides one template tag for use in your theme templates, functions.php, or plugins.
 
 = Functions =
 
@@ -45,10 +69,10 @@ A single post ID/slug, or multiple post IDs/slugs defined via an array, or multi
 (optional) To appear after the entire post listing (if posts exist or if 'none' setting is specified)
 
 * `$between`
-(optional) To appear between all posts
+(optional) To appear between posts
 
 * `$before_last`
-(optional) To appear between the second-to-last and last element, if not specified, 'between' value is used	
+(optional) To appear between the second-to-last and last element, if not specified, 'between' value is used
 
 * `$none`
 (optional) To appear when no posts have been found.  If blank, then the entire function doesn't display anything
@@ -129,6 +153,14 @@ Do:
 
 == Changelog ==
 
+= 2.1 =
+* Add Linkify Posts widget
+* Note compatibility through WP 3.1+
+* Add Screenshots and Frequently Asked Questions sections to readme.txt
+* Add screenshot of widget admin
+* Update copyright date (2011)
+* Change tags in readme.txt
+
 = 2.0 =
 * Rename plugin from 'Linkify Post IDs' to 'Linkify Posts'
 * Rename `linkify_post_ids()` to `c2c_linkify_posts()` (but maintain a deprecated version for backwards compatibility)
@@ -156,6 +188,9 @@ Do:
 
 
 == Upgrade Notice ==
+
+= 2.1 =
+Feature update: added widget, added Screenshots and FAQ sections to readme, noted compatibility with WP 3.1+, and updated copyright date (2011).
 
 = 2.0 =
 Significant update. Highlights: renamed plugin; renamed `linkify_post_ids()` to `c2c_linkify_posts()`; allow specifying post slug as well as ID; dropped compatibility with versions of WP older than 2.8.

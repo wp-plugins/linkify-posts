@@ -2,17 +2,17 @@
 /**
  * @package Linkify_Posts
  * @author Scott Reilly
- * @version 2.0
+ * @version 2.1
  */
 /*
 Plugin Name: Linkify Posts
-Version: 2.0
+Version: 2.1
 Plugin URI: http://coffee2code.com/wp-plugins/linkify-posts/
 Author: Scott Reilly
 Author URI: http://coffee2code.com
 Description: Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
 
-Compatible with WordPress 2.8+, 2.9+, 3.0+.
+Compatible with WordPress 2.8+, 2.9+, 3.0+, 3.1+.
 
 =>> Read the accompanying readme.txt file for instructions and documentation.
 =>> Also, visit the plugin's homepage for additional information and updates.
@@ -21,7 +21,7 @@ Compatible with WordPress 2.8+, 2.9+, 3.0+.
 */
 
 /*
-Copyright (c) 2007-2010 by Scott Reilly (aka coffee2code)
+Copyright (c) 2007-2011 by Scott Reilly (aka coffee2code)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
 files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
@@ -35,6 +35,8 @@ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO 
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+
+require_once( dirname( __FILE__ ) . '/linkify-posts.widget.php' );
 
 if ( !function_exists( 'c2c_linkify_posts' ) ) :
 /**
@@ -55,9 +57,9 @@ function c2c_linkify_posts( $posts, $before = '', $after = '', $between = ', ', 
 	elseif ( !is_array( $posts ) )
 		$posts = explode( ',', str_replace( array( ', ', ' ', ',' ), ',', $posts ) );
 
-	if ( empty( $posts ) )
+	if ( empty( $posts ) ) {
 		$response = '';
-	else {
+	} else {
 		$links = array();
 		foreach ( $posts as $id ) {
 			if ( 0 == (int) $id ) {
@@ -76,9 +78,9 @@ function c2c_linkify_posts( $posts, $before = '', $after = '', $between = ', ', 
 					$title
 				);
 		}
-		if ( empty( $before_last ) )
+		if ( empty( $before_last ) ) {
 			$response = implode( $between, $links );
-		else {
+		} else {
 			switch ( $size = sizeof( $links ) ) {
 				case 1:
 					$response = $links[0];
