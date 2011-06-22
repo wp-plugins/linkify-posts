@@ -3,9 +3,9 @@ Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
 Tags: posts, post, link, linkify, archives, list, widget, template tag, coffee2code
 Requires at least: 2.8
-Tested up to: 3.1
-Stable tag: 2.1
-Version: 2.1
+Tested up to: 3.2
+Stable tag: 2.1.1
+Version: 2.1.1
 
 Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
 
@@ -18,7 +18,7 @@ The plugin provides a widget called "Linkify Catagories" as well as a template t
 
 Particularly handy when used in conjunction with the post custom field feature of WordPress.  You could define a custom field for "Related Posts" or "Additional Products" and manually list out post IDs, then utilize the function provided by this plugin to display links to those posts in a custom manner.
 
-Links: [Plugin Homepage]:(http://coffee2code.com/wp-plugins/linkify-posts/) | [Author Homepage]:(http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/linkify-posts/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -153,6 +153,11 @@ Do:
 
 == Changelog ==
 
+= 2.1.1 =
+* Note compatibility through WP 3.2+
+* Minor code formatting changes (spacing)
+* Fix plugin homepage and author links in description in readme.txt
+
 = 2.1 =
 * Add Linkify Posts widget
 * Note compatibility through WP 3.1+
@@ -188,6 +193,9 @@ Do:
 
 
 == Upgrade Notice ==
+
+= 2.1.1 =
+Trivial update: noted compatibility through WP 3.2+ and minor code formatting changes (spacing)
 
 = 2.1 =
 Feature update: added widget, added Screenshots and FAQ sections to readme, noted compatibility with WP 3.1+, and updated copyright date (2011).

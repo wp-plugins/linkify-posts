@@ -38,7 +38,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 require_once( dirname( __FILE__ ) . '/linkify-posts.widget.php' );
 
-if ( !function_exists( 'c2c_linkify_posts' ) ) :
+if ( ! function_exists( 'c2c_linkify_posts' ) ) :
 /**
  * Displays links to each of any number of posts specified via post IDs and/or slugs
  *
@@ -54,7 +54,7 @@ if ( !function_exists( 'c2c_linkify_posts' ) ) :
 function c2c_linkify_posts( $posts, $before = '', $after = '', $between = ', ', $before_last = '', $none = '' ) {
 	if ( empty( $posts ) )
 		$posts = array();
-	elseif ( !is_array( $posts ) )
+	elseif ( ! is_array( $posts ) )
 		$posts = explode( ',', str_replace( array( ', ', ' ', ',' ), ',', $posts ) );
 
 	if ( empty( $posts ) ) {
@@ -103,7 +103,7 @@ function c2c_linkify_posts( $posts, $before = '', $after = '', $between = ', ', 
 add_action( 'c2c_linkify_posts', 'c2c_linkify_posts', 10, 6 );
 endif;
 
-if ( !function_exists( 'linkify_post_ids' ) ) :
+if ( ! function_exists( 'linkify_post_ids' ) ) :
 /**
  * Displays links to each of any number of posts specified via post IDs and/or slugs
  *
