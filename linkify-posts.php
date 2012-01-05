@@ -2,17 +2,17 @@
 /**
  * @package Linkify_Posts
  * @author Scott Reilly
- * @version 2.1
+ * @version 2.1.2
  */
 /*
 Plugin Name: Linkify Posts
-Version: 2.1
+Version: 2.1.2
 Plugin URI: http://coffee2code.com/wp-plugins/linkify-posts/
 Author: Scott Reilly
-Author URI: http://coffee2code.com
+Author URI: http://coffee2code.com/
 Description: Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
 
-Compatible with WordPress 2.8+, 2.9+, 3.0+, 3.1+.
+Compatible with WordPress 2.8+, 2.9+, 3.0+, 3.1+, 3.2+, 3.3+.
 
 =>> Read the accompanying readme.txt file for instructions and documentation.
 =>> Also, visit the plugin's homepage for additional information and updates.
@@ -21,7 +21,7 @@ Compatible with WordPress 2.8+, 2.9+, 3.0+, 3.1+.
 */
 
 /*
-Copyright (c) 2007-2011 by Scott Reilly (aka coffee2code)
+Copyright (c) 2007-2012 by Scott Reilly (aka coffee2code)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
 files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
@@ -115,4 +115,5 @@ function linkify_post_ids( $posts, $before = '', $after = '', $between = ', ', $
 	return c2c_linkify_posts( $posts, $before, $after, $between, $before_last, $none );
 }
 endif;
+
 ?>
