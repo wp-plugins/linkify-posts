@@ -5,22 +5,19 @@ Tags: posts, post, link, linkify, archives, list, widget, template tag, coffee2c
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.8
-Tested up to: 3.5
-Stable tag: 2.1.4
-Version: 2.1.4
+Tested up to: 3.8
+Stable tag: 2.2
 
 Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
 
 
 == Description ==
 
-Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
+The plugin provides a widget called "Linkify Posts" as well as a template tag, `c2c_linkify_posts()`, which allow you to easily specify posts to list and how to list them. Posts are specified by either ID or slug. See other parts of the documentation for example usage and capabilities.
 
-The plugin provides a widget called "Linkify Catagories" as well as a template tag, `c2c_linkify_categories()`, to easily indicate categories to list and how to list them.  Categories are specified by either ID or slug.  See other parts of the documentation for example usage and capabilities.
+Particularly handy when used in conjunction with the post custom field feature of WordPress. You could define a custom field for "Related Posts" or "Additional Products" and manually list out post IDs, then utilize the function provided by this plugin to display links to those posts in a custom manner.
 
-Particularly handy when used in conjunction with the post custom field feature of WordPress.  You could define a custom field for "Related Posts" or "Additional Products" and manually list out post IDs, then utilize the function provided by this plugin to display links to those posts in a custom manner.
-
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/linkify-posts/) | [Plugin Directory Page](http://wordpress.org/extend/plugins/linkify-posts/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/linkify-posts/) | [Plugin Directory Page](http://wordpress.org/plugins/linkify-posts/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -77,7 +74,7 @@ A single post ID/slug, or multiple post IDs/slugs defined via an array, or multi
 (optional) To appear between the second-to-last and last element, if not specified, 'between' value is used
 
 * `$none`
-(optional) To appear when no posts have been found.  If blank, then the entire function doesn't display anything
+(optional) To appear when no posts have been found. If blank, then the entire function doesn't display anything
 
 = Examples =
 
@@ -155,6 +152,16 @@ Do:
 
 == Changelog ==
 
+= 2.2 (2013-12-20) =
+* Validate post is either int or string before handling
+* Add unit tests
+* Minor code tweaks (spacing, bracing)
+* Minor documentation tweaks
+* Note compatibility through WP 3.8+
+* Update copyright date (2014)
+* Change donate link
+* Add banner
+
 = 2.1.4 =
 * Add check to prevent execution of code if file is directly accessed
 * Note compatibility through WP 3.5+
@@ -213,6 +220,9 @@ Do:
 
 
 == Upgrade Notice ==
+
+= 2.2 =
+Moderate update: better validate data received; added unit tests; noted compatibility through WP 3.8+
 
 = 2.1.4 =
 Trivial update: noted compatibility through WP 3.5+
