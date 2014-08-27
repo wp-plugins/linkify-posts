@@ -1,12 +1,12 @@
 === Linkify Posts ===
 Contributors: coffee2code
-Donate link: http://coffee2code.com/donate
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6ARCFJ9TX3522
 Tags: posts, post, link, linkify, archives, list, widget, template tag, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.8
-Tested up to: 3.8
-Stable tag: 2.2
+Tested up to: 4.0
+Stable tag: 2.2.1
 
 Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
 
@@ -17,7 +17,7 @@ The plugin provides a widget called "Linkify Posts" as well as a template tag, `
 
 Particularly handy when used in conjunction with the post custom field feature of WordPress. You could define a custom field for "Related Posts" or "Additional Products" and manually list out post IDs, then utilize the function provided by this plugin to display links to those posts in a custom manner.
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/linkify-posts/) | [Plugin Directory Page](http://wordpress.org/plugins/linkify-posts/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/linkify-posts/) | [Plugin Directory Page](https://wordpress.org/plugins/linkify-posts/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -45,6 +45,10 @@ Whether you use the template tag or the widget, specify the following informatio
 * Before text: `<ul><li>` (or `<ol><li>`)
 * After text: `</li></ul>` (or `</li></ol>`)
 * Between posts: `</li><li>`
+
+= Does this plugin include unit tests? =
+
+Yes.
 
 
 == Template Tags ==
@@ -152,6 +156,13 @@ Do:
 
 == Changelog ==
 
+= 2.2.1 (2014-08-26) =
+* Minor plugin header reformatting
+* Change donate link
+* Change documentation links to wp.org to be https
+* Note compatibility through WP 4.0+
+* Add plugin icon
+
 = 2.2 (2013-12-20) =
 * Validate post is either int or string before handling
 * Add unit tests
@@ -220,6 +231,9 @@ Do:
 
 
 == Upgrade Notice ==
+
+= 2.2.1 =
+Trivial update: noted compatibility through WP 4.0+; added plugin icon.
 
 = 2.2 =
 Moderate update: better validate data received; added unit tests; noted compatibility through WP 3.8+
