@@ -2,16 +2,18 @@
 /**
  * @package Linkify_Posts_Widget
  * @author Scott Reilly
- * @version 001
+ * @version 002
  */
 /*
  * Linkify Posts plugin widget code
  *
- * Copyright (c) 2011 by Scott Reilly (aka coffee2code)
+ * Copyright (c) 2011-2014 by Scott Reilly (aka coffee2code)
  *
  */
 
-if ( class_exists( 'WP_Widget' ) && !class_exists( 'c2c_LinkifyPostsWidget' ) ) :
+defined( 'ABSPATH' ) or die();
+
+if ( class_exists( 'WP_Widget' ) && ! class_exists( 'c2c_LinkifyPostsWidget' ) ) :
 
 class c2c_LinkifyPostsWidget extends WP_Widget {
 	private $widget_id = 'linkify_posts';
