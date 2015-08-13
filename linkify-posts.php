@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Linkify Posts
- * Version:     2.2.2
+ * Version:     2.2.3
  * Plugin URI:  http://coffee2code.com/wp-plugins/linkify-posts/
  * Author:      Scott Reilly
  * Author URI:  http://coffee2code.com/
@@ -9,15 +9,15 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Description: Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
  *
- * Compatible with WordPress 2.8 through 4.1+.
+ * Compatible with WordPress 2.8 through 4.3+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
  * =>> Or visit: https://wordpress.org/plugins/linkify-posts/
  *
  * @package Linkify_Posts
- * @author Scott Reilly
- * @version 2.2.2
+ * @author  Scott Reilly
+ * @version 2.2.3
  */
 
 /*
@@ -48,12 +48,13 @@ if ( ! function_exists( 'c2c_linkify_posts' ) ) :
  *
  * @since 2.0
  *
- * @param int|array $posts A single post ID/slug, or multiple post IDs/slugs defined via an array, or multiple posts IDs/slugs defined via a comma-separated and/or space-separated string
- * @param string $before (optional) To appear before the entire post listing (if posts exist or if 'none' setting is specified)
- * @param string $after (optional) To appear after the entire post listing (if posts exist or if 'none' setting is specified)
- * @param string $between (optional) To appear between all posts
- * @param string $before_last (optional) To appear between the second-to-last and last element, if not specified, value of $between is used
- * @param string $none (optional) To appear when no posts have been found.  If blank, then the entire function doesn't display anything
+ * @param int|array $posts       A single post ID/slug, or multiple post IDs/slugs defined via an array, or multiple posts IDs/slugs defined
+ *                               via a comma-separated and/or space-separated string
+ * @param string    $before      Optional. To appear before the entire post listing (if posts exist or if 'none' setting is specified).
+ * @param string    $after       Optional. To appear after the entire post listing (if posts exist or if 'none' setting is specified).
+ * @param string    $between     Optional. To appear between all posts.
+ * @param string    $before_last Optional. To appear between the second-to-last and last element, if not specified, value of $between is used.
+ * @param string    $none        Optional. To appear when no posts have been found.  If blank, then the entire function doesn't display anything.
  */
 function c2c_linkify_posts( $posts, $before = '', $after = '', $between = ', ', $before_last = '', $none = '' ) {
 	if ( empty( $posts ) ) {

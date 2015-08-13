@@ -5,8 +5,8 @@ Tags: posts, post, link, linkify, archives, list, widget, template tag, coffee2c
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.8
-Tested up to: 4.1
-Stable tag: 2.2.2
+Tested up to: 4.3
+Stable tag: 2.2.3
 
 Turn a string, list, or array of post IDs and/or slugs into a list of links to those posts.
 
@@ -156,6 +156,13 @@ Do:
 
 == Changelog ==
 
+= 2.2.3 (2015-08-12) =
+* Update: Discontinue use of PHP4-style constructor invocation of WP_Widget to prevent PHP notices in PHP7
+* Update: Minor widget header reformatting
+* Update: Minor widget file code tweaks (spacing, bracing)
+* Update: Minor inline document tweaks (spacing)
+* Note compatibility through WP 4.3+
+
 = 2.2.2 (2015-02-11) =
 * Note compatibility through WP 4.1+
 * Update copyright date (2015)
@@ -235,6 +242,9 @@ Do:
 
 
 == Upgrade Notice ==
+
+= 2.2.3 =
+Bugfix update: Prevented PHP notice under PHP7+ for widget; noted compatibility through WP 4.3+
 
 = 2.2.2 =
 Trivial update: noted compatibility through WP 4.1+ and updated copyright date
